@@ -1,0 +1,17 @@
+body {
+    padding: 10px;
+    font-family: Verdana, sans-serif;
+}
+
+.login-buttons-dropdown-align-right {
+    float: right;
+}
+
+#login-dropdown-list, .dropdown-toggle{
+    text-decoration:none;
+    list-style:none;
+}
+
+.input-group{
+    max-width:300px;
+}

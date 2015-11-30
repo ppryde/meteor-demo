@@ -1,0 +1,102 @@
+<head>
+  <title>Meteor Chat Application.</title>
+    <link rel="icon" type="image/png" href="icons.iconarchive.com/icons/flat-icon.com/flat/64/Meteor-icon.png"/>
+</head>
+
+<body>
+  {{> layout1}}
+</body>
+
+<template name="layout1">
+  <h1>Chatapp</h1>
+
+  {{> welcome }}
+  {{> input }}
+  {{> messages }}
+</template>
+
+
+<template name="welcome">
+  <p>
+    Let's chat.
+  </p>
+</template>
+
+<template name="messages">
+  {{#each messages}}
+    <strong>{{name}}:</strong> {{message}}<br>
+  {{/each}}
+</template>
+
+<template name="input">
+    <div class = "input-group">
+       <input type="text" id="message" class="form-control">
+       <span class = "input-group-btn">
+          <button class="btn btn-success" id="sendBtn">Send</button>
+       </span>
+    </div>
+</template>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<template name="layout2">
+  <h1>Chatapp</h1>
+  {{> loginButtons}}
+
+  {{#if currentUser}}
+      {{> welcome }}
+      {{> input }}
+      {{> messages }}
+  {{else}}
+      {{> notLoggedIn}}
+  {{/if}}
+</template>
+
+<template name="notLoggedIn">
+    I'm sorry you must be logged in to send or view messages
+</template>
